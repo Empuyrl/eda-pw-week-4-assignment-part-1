@@ -34,16 +34,16 @@ console.log('in multiplyThree', num1, num2, num3);
 let result = num1 * num2 * num3;
 return result;
 }
-console.log('running multiplyThree with 4 & 57 & 11', multiplyThree(4, 57, 11));
+console.log('running multiplyThree with 4 & 57 & 11:', multiplyThree(4, 57, 11));
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
-  }
-    return;
+    return true;
+  } else if (number <= 0)
+    return false;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
@@ -55,9 +55,12 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+  if (array.length -1){
+    return lastItem;
+  } else if (array === empty)
+  return 'undefined';
 }
-
+console.log(getLast[0, 1, 2, 3, 4, 5]);
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
