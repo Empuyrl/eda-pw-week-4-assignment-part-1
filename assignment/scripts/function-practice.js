@@ -55,19 +55,30 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
-  if (array[5]){
-    return lastItem;
-  } else if (array === empty)
-  return 'undefined';
+ if (array.length === 0){
+  console.log("Array is empty");
+  return undefined;
+ } else {
+  console.log("Last item in the array is", array[array.length - 1]);
+  return array[array.length - 1];
+ }
 }
-console.log(getLast[0, 1, 2, 3, 4, 5]);
+console.log("Array is empty");
+console.log("Last item in the array is", array[array.length - 1]);
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  console.log('in find', value, array);
+for (let i = 0; i < value.length; i++) {
+  if (value[i] === array) {
+    return true;
+  }
+}
+return false;
 }
 
+console.log( 'in find', [1, 2, 3, 4, 5]);
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -85,7 +96,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
-  let sum = 0
+  let sum = 2
   // TODO: loop to add items
 for (let i = 0; i < array.length; i += 2); {
 sum += array[i];
