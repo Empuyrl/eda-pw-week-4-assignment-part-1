@@ -63,8 +63,8 @@ function getLast( array ) {
   return array[array.length - 1];
  }
 }
-console.log("Array is empty");
-console.log("Last item in the array is", array[array.length - 1]);
+console.log("Array is empty", undefined);
+console.log("Last item in the array is", getLast([1, 2, 3, 4]));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
