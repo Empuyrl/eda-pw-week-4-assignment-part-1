@@ -69,16 +69,16 @@ console.log("Last item in the array is", getLast([1, 2, 3, 4]));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  console.log('in find', value, array);
-for (let i = 0; i < value.length; i++) {
-  if (value[i] === array) {
+
+for (let i = 0; i < array.length; i++) {
+  if (array[i] === value) {
     return true;
   }
 }
 return false;
 }
-
-console.log( 'in find', [1, 2, 3, 4, 5]);
+console.log('was found in the array', find(3, [1, 3, 5, 7]));
+console.log("was not found in the array", find(0, [1, 3, 5, 7]));
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -96,7 +96,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
-  let sum = 2
+  let sum = 0
   // TODO: loop to add items
 for (let i = 0; i < array.length; i += 2); {
 sum += array[i];
