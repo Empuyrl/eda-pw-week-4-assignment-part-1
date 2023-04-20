@@ -14,11 +14,12 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName( name ) {
+function hello( name ) {
   return "Hello Jason!";
 }
+// calling a given function, but with your own answer
 // Remember to call the function to test
-console.log('"Hello Jason!"', helloName());
+console.log(hello());
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -55,16 +56,18 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
- if (array.length === 0){
-  console.log("Array is empty");
-  return undefined;
- } else {
-  console.log("Last item in the array is", array[array.length - 1]);
+ if (array.length > 0){
+   console.log("Last item in the array is", array[array.length - 1]);
   return array[array.length - 1];
+ } else {
+  return undefined;
  }
 }
-console.log("Array is empty", undefined);
 console.log("Last item in the array is", getLast([1, 2, 3, 4]));
+console.log("Array is empty", getLast([])); 
+
+//good reminders on how to call functions
+
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
@@ -94,16 +97,10 @@ function isFirstLetter(letter, string) {
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
+//come back to figure this out
+
 // 9. Function to return the sum of all numbers in an array
-function sumAll(array) {
-  let sum = 0
-  // TODO: loop to add items
-for (let i = 0; i < array.length; i += 2); {
-sum += array[i];
-}
-  return sum;
-}
-console.log(sumAll([2, 4, 6, 8, 10]));
+
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
