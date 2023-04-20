@@ -14,12 +14,16 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function hello( name ) {
-  return "Hello Jason!";
+function personalizedHello(name){
+  return `Hello, ${name}!`
 }
+
+//need to read each question multiple times
+//remember backticks when using ${} template 
+
 // calling a given function, but with your own answer
 // Remember to call the function to test
-console.log(hello());
+console.log(personalizedHello('Jason'));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
